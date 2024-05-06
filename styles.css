@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+    /* Add additional font weights and styles if needed */
+}
+
+body {
+    font-family: JetBrains Mono, sans-serif;
+    text-align: center;
+    background-color: #3c3836; /* Light gray background color */
+}
+
+h1 {
+    color: #ebdbb2;
+}
+
+p {
+    color: #ebdbb2;
+}
