@@ -7,13 +7,19 @@
 body {
     font-family: JetBrains Mono, sans-serif;
     text-align: center;
-    background-color: #3c3836; /* Light gray background color */
+    background-color: #FFFFFF;
+}
+
+.section {
+    font-family: JetBrains Mono, sans-serif;
+    text-align: left;
+    background-color: #FFFFFF;
 }
 
 h1 {
-    color: #ebdbb2;
+    color: #000000;
 }
 
 p {
-    color: #ebdbb2;
+    color: #000000;
 }
