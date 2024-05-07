@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Hello, World!</title>
+    <title>Website Project</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
-    <h1 id="clickable-heading">Hello, World!</h1>
-    <script src="change_color.js"></script>
+    <!-- idea: make typing possible to navigate -->
+    <!-- potentially vim keys? -->
+    <h1>home:~$ <span id="blinking-character">_</span></h1>
+    <script src="blinking_character.js"></script>
+
     <p>Welcome to my first website!</p>
+
     <a href="new_page.html">Visit New Page</a>
-        
+    <a href="game/index.html">Test Game</a>
+
     <div class="section">
-        <h1>A different body.</h1>
-        <p>Text under second body.</p>
+        <!-- only .data has to be in same folder -> otherwise .js and .wasm is only thing needed somewhere??? -->
+        <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+        <script type='text/javascript'>
+            var Module = {
+                canvas: (function () {return document.getElementById('canvas');})()
+            };
+        </script>
+        <script src="game/game.js"></script>
     </div>
 </body>
+
 </html>

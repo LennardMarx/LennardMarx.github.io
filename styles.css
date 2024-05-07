@@ -4,22 +4,34 @@
     /* Add additional font weights and styles if needed */
 }
 
+:root {
+    --gruv-light: #f9f5d7;
+    --gruv-dark: #3c3836;
+    --gruv-blue: #076678;
+}
+
 body {
     font-family: JetBrains Mono, sans-serif;
-    text-align: center;
-    background-color: #FFFFFF;
+    text-align: left;
+    /* background-color: #3c3836; */
+    /* background-color: $secondary-color; */
+    background-color: var(--gruv-dark);
 }
 
 .section {
     font-family: JetBrains Mono, sans-serif;
-    text-align: left;
-    background-color: #FFFFFF;
+    text-align: center;
+    background-color: var(--gruv-blue);
 }
 
 h1 {
-    color: #000000;
+    color: var(--gruv-light);
 }
 
 p {
-    color: #000000;
+    color: var(--gruv-light);
+}
+
+a{
+    color: var(--gruv-light);
 }
