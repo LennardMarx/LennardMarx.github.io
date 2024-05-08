@@ -6,7 +6,7 @@
 
 :root {
     --gruv-light: #f9f5d7;
-    --gruv-dark: #3c3836;
+    --gruv-dark: #282828;
     --gruv-blue: #076678;
 }
 
@@ -19,10 +19,18 @@ body {
 }
 
 .section {
-    font-family: JetBrains Mono, sans-serif;
-    text-align: center;
-    background-color: var(--gruv-blue);
+    /* font-family: JetBrains Mono, sans-serif; */
+    /* text-align: center; */
+    /* background-color: var(--gruv-blue); */
+    display: inline-block; /* Ensure the div only takes the necessary width */
 }
+
+canvas {
+    display: block; /* Make the canvas a block element */
+    width: 100%; /* Set the canvas width to 100% of its container (the div) */
+    height: auto; /* Allow the canvas height to adjust proportionally */
+}
+
 
 h1 {
     color: var(--gruv-light);

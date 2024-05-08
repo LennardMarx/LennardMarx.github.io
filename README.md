@@ -2,11 +2,11 @@
 
 ## Start local server
 ```
-python3 -m http.server
+python3 -m http.server 8080
 ```
 
 ## Website url
-http://localhost:8000/Projects/website_test/
+localhost:8080
 
 ## Web Assebmly - wasm
 - .data file has to be in the same folder as the html

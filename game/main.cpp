@@ -15,7 +15,7 @@ struct context {
  SDL_Texture *screen;
  SDL_Rect screensize;
  SDL_Event event;
- SDL_Color bkg = {0,100,255,255};
+ SDL_Color bkg = {7,102,120,255};
 
  int frameCount, timerFPS, lastFrame, fps, lastTime;
  int setFPS = 60;
