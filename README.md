@@ -1,5 +1,7 @@
 # Personal website
 
+## Note
+If .css updates are not applied **clear cache!**
 ## Start local server
 ```
 python3 -m http.server 8080

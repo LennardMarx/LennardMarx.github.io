@@ -40,6 +40,16 @@ p {
     color: var(--gruv-light);
 }
 
-a{
+a {
+    /* text-decoration: none !important; */
+    text-decoration: none;
     color: var(--gruv-light);
 }
+a:hover {
+    text-decoration: underline;
+}
+
+/* a.no-underline { */
+/*     text-decoration: none; */
+/* } */
+
