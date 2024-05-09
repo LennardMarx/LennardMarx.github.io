@@ -70,11 +70,10 @@ public:
   void run() { emscripten_set_main_loop_arg(mainloop, &ctx, -1, 1); }
 
   // void run() {
+private:
   static void mainloop(void *arg) {
-    // chdir(SDL_GetBasePath());
     context *ctx = static_cast<context *>(arg);
 
-    // while (!ctx.helperVars.getQuit()) {
     ctx->frameStart = SDL_GetTicks(); // limit framerate (see end of while loop)
 
     // check for Keyboard inputs;
@@ -175,7 +174,6 @@ public:
     if (ctx->frameDelay > ctx->frameTime) {
       SDL_Delay(ctx->frameDelay - ctx->frameTime);
     }
-    // }
   }
 
 private:
