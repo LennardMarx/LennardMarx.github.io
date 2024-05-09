@@ -44,9 +44,11 @@ public:
 
   void clear() {
     // setDrawColor(0, 70, 110, 255);
-    setDrawColor(69, 133, 136, 255);
+    // setDrawColor(69, 133, 136, 255); // gruv-blue
+    setDrawColor(40, 40, 40, 255); // gruv-dark (darkest)
     SDL_RenderClear(renderer);
-    setDrawColor(255, 255, 255, 255);
+    // setDrawColor(255, 255, 255, 255); // white
+    setDrawColor(249, 245, 215, 255); // gruv-light (lightest)
   }
 
   void present() {

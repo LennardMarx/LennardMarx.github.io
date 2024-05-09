@@ -16,6 +16,8 @@ body {
     /* background-color: #3c3836; */
     /* background-color: $secondary-color; */
     background-color: var(--gruv-dark);
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 .section {
@@ -23,6 +25,8 @@ body {
     /* text-align: center; */
     /* background-color: var(--gruv-blue); */
     display: inline-block; /* Ensure the div only takes the necessary width */
+    padding-left: 0px;
+    padding-top: 0px;
 }
 
 canvas {
@@ -34,10 +38,18 @@ canvas {
 
 h1 {
     color: var(--gruv-light);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    /* padding-top: 0px; /*
+    /* padding-bottom: 0px; /*
+    /* padding-left: 20px; /*
+    padding-right: 0; /* or whatever your desired padding value is */
 }
 
 p {
     color: var(--gruv-light);
+    margin-left: 10px;
 }
 
 a {

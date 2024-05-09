@@ -7,33 +7,42 @@
 </head>
 
 <body>
-    <!-- idea: make typing possible to navigate -->
-    <!-- potentially vim keys? -->
-    <h1>
-        <a href="index.html" class="no-underline">home</a>:~$ <span id="blinking-character">_</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        cd <a href="new_page.html" class="no-underline">new_page/</a>
-    </h1>
-    <script src="blinking_character.js"></script>
+    <!-- <h1> -->
+    <!--     <a href="index.html" class="no-underline">home</a>:~$ <span id="blinking-character">_</span> -->
+    <!--     &nbsp;&nbsp;&nbsp;&nbsp; -->
+    <!--     cd <a href="new_page.html" class="no-underline">new_page/</a> -->
+    <!-- </h1> -->
+    <!-- <script src="blinking_character.js"></script> -->
+    <!---->
+    <!-- <p>Welcome to my website!</p> -->
 
-    <p>Welcome to my website!</p>
+    <div id="container" style="position:relative;">
+        <div id="div1" style="position:absolute; top:0; left:0;">
+            <h1>
+                <a href="index.html" class="no-underline">home</a>:~$ <span id="blinking-character">_</span>
+            </h1>
+        </div>
+        <div id="div2" style="position:absolute; top:0; left:400px;">
+            <h1>
+                cd <a href="new_page.html" class="no-underline">new_page/</a>
+            </h1>
+        </div>
+        <div id="div3" style="position:absolute; top:450px; left:700px;">
+            <h1>
+                <a href="new_page.html" class="no-underline">Link</a>
+            </h1>
+        </div>
 
-    <!-- <div class="navigation"> -->
-    <!--     <a href="new_page.html">Visit New Page</a> -->
-    <!--     <!-- <a href="robotarm/robotarm.html">Test Game</a> -->
-    <!-- </div> -->
-    <!-- <a href="new_page.html">Visit New Page</a> -->
-    <!-- <a href="game/game.html">Test Game</a> -->
-
-    <div class="section">
-        <!-- only .data has to be in same folder -> otherwise .js and .wasm is only thing needed somewhere??? -->
-        <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-        <script type='text/javascript'>
-            var Module = {
-                canvas: (function () {return document.getElementById('canvas');})()
-            };
-        </script>
-        <script src="robotarm/robotarm.js"></script>
+        <div class="section">
+            <!-- only .data has to be in same folder -> otherwise .js and .wasm is only thing needed somewhere??? -->
+            <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+            <script type='text/javascript'>
+                var Module = {
+                    canvas: (function () {return document.getElementById('canvas');})()
+                };
+            </script>
+            <script src="robotarm/robotarm.js"></script>
+        </div>
     </div>
 </body>
 
