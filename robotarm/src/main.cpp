@@ -1,4 +1,4 @@
-#include "sim_loop.h"
+#include "../include/sim_loop.h"
 
 int main() {
   SimLoop simLoop;
