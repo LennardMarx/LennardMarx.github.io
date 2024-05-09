@@ -7,34 +7,37 @@
 </head>
 
 <body>
-    <!-- <h1> -->
-    <!--     <a href="index.html" class="no-underline">home</a>:~$ <span id="blinking-character">_</span> -->
-    <!--     &nbsp;&nbsp;&nbsp;&nbsp; -->
-    <!--     cd <a href="new_page.html" class="no-underline">new_page/</a> -->
-    <!-- </h1> -->
-    <!-- <script src="blinking_character.js"></script> -->
-    <!---->
-    <!-- <p>Welcome to my website!</p> -->
-
     <div id="container" style="position:relative;">
-        <div id="div1" style="position:absolute; top:0; left:0;">
+        <div id="div_home" style="position:absolute; top:0; left:0;">
             <h1>
-                <a href="index.html" class="no-underline">home</a>:~$ <span id="blinking-character">_</span>
+                <a href="index.html" class="no-underline">home</a>:~$ cd <span id="blinking-character">_</span>
+                <script src="js/blinking_character.js"></script>
             </h1>
         </div>
-        <div id="div2" style="position:absolute; top:0; left:400px;">
+
+        <div id="div_projects" style="position:absolute; top:50px; left:0px;">
             <h1>
-                cd <a href="new_page.html" class="no-underline">new_page/</a>
+                <a href="projects.html" class="no-underline">projects/</a>
             </h1>
         </div>
-        <div id="div3" style="position:absolute; top:450px; left:700px;">
+
+        <div id="div_new_page" style="position:absolute; top:50px; left:200px;">
+            <h1>
+                <a href="new_page.html" class="no-underline">new_page/</a>
+            </h1>
+        </div>
+
+
+        <div id="div_link" style="position:absolute; top:450px; left:700px;">
             <h1>
                 <a href="new_page.html" class="no-underline">Link</a>
             </h1>
         </div>
+        <div id="div_welcome" style="position:absolute; top:200px; left:200px;">
+            <p>welcome to <br> my home page.</p>
+        </div>
 
         <div class="section">
-            <!-- only .data has to be in same folder -> otherwise .js and .wasm is only thing needed somewhere??? -->
             <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
             <script type='text/javascript'>
                 var Module = {

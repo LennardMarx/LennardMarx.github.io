@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('/fonts/JetBrainsMonoNerdFont-Regular.ttf') format('truetype');
+    /* Add additional font weights and styles if needed */
+}
+
+:root {
+    --gruv-light: #f9f5d7; /* lightest gruvbox */
+    --gruv-dark: #282828; /* darkest gruvbox */
+    --gruv-blue: #076678; /* */
+}
+
+body {
+  
+    font-family: JetBrains Mono, sans-serif;
+    text-align: left;
+    background-color: var(--gruv-dark);
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+canvas {
+    display: block; /* Make the canvas a block element */
+    width: 100%; /* Set the canvas width to 100% of its container (the div) */
+    height: auto; /* Allow the canvas height to adjust proportionally */
+}
