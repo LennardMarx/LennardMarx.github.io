@@ -5,8 +5,8 @@
 }
 
 :root {
-    --gruv-light: #f9f5d7; /* lightest gruvbox */
     --gruv-dark: #282828; /* darkest gruvbox */
+    --gruv-light: #f9f5d7; /* lightest gruvbox */
     --gruv-blue: #076678; /* */
 }
 
@@ -24,3 +24,4 @@ canvas {
     width: 100%; /* Set the canvas width to 100% of its container (the div) */
     height: auto; /* Allow the canvas height to adjust proportionally */
 }
+

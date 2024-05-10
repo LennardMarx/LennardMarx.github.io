@@ -6,39 +6,52 @@
     <!-- define which css file is used for the style -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
 <body>
     <div id="container" style="position:relative;">
         <div id="projects" style="position:absolute; top:0; left:0;">
             <h1>
-                <a href="index.html" class="no-underline">home</a>:~/projects$ cd <span id="blinking-character">_</span>
+                <a href="index.html" class="no-underline">home</a>:~/projects$ cd ~/<span
+                    id="blinking-character">_</span>
             </h1>
             <script src="js/blinking_character.js"></script>
         </div>
-        <div id="dot" style="position:absolute; top:50px; left:0px;">
-            <h1>
-                <a href="projects.html" class="no-underline">.</a>
-            </h1>
-        </div>
 
-        <div id="dot dot" style="position:absolute; top:50px; left:50px;">
-            <h1>
-                <a href="index.html" class="no-underline">..</a>
-            </h1>
-        </div>
+        <!-- <div id="dot" style="position:absolute; top:50px; left:0px;"> -->
+        <!--     <h1> -->
+        <!--         <a href="projects.html" class="no-underline">.</a> -->
+        <!--     </h1> -->
+        <!-- </div> -->
+        <!---->
+        <!-- <div id="dot dot" style="position:absolute; top:50px; left:50px;"> -->
+        <!--     <h1> -->
+        <!--         <a href="index.html" class="no-underline">..</a> -->
+        <!--     </h1> -->
+        <!-- </div> -->
 
-        <div id="dot dot" style="position:absolute; top:50px; left:120px;">
+        <!-- <div id="dot dot" style="position:absolute; top:50px; left:120px;"> -->
+        <div id="dot dot" style="position:absolute; top:50px; left:0px;">
             <h1>
-                <a href="new_page.html" class="no-underline">../new_page/</a>
+                <a href="new_page.html" class="no-underline">new_page/</a>
             </h1>
         </div>
 
     </div>
 
-    <div id="container2" style="position:relative; top:130px; left:10px;">
-        <iframe id="iframe2" style="border:0" src="robotarm_standalone/robotarm.html" width="600px"
-            height="405px"></iframe>
-        <div style="position:absolute; top:0; left:620px; right:50px; width:600px;">
+    <div id="container2" style="position:relative; display:flex; flex-wrap: wrap; top:130px; left:10px;">
+        <div id="iframe_container"
+            style="position:relative; min-width:30%; width:600px; max-width:100%; aspect-ratio:3/2; overflow:hidden;">
+            <iframe id="iframe2" style="border:0; display:inline-block; width:100%; height:100%" src="">
+            </iframe>
+            <div id="textContainer"
+                style="display:block; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
+                <p>
+                    > hover to try < </p>
+            </div>
+        </div>
+
+        <div style="position:relative; top:0; left:10px; width:600px;">
             <p>> Robot Arm</p>
             <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
                 Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -48,34 +61,22 @@
                 ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
                 enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
         </div>
+        <script src="js/hide_iframe.js"></script>
         <script>
-            // Get references to the container and iframe elements
-            // const container = document.getElementById('div-container2');
-            const iframe = document.getElementById('iframe2');
-
-            // Function to load the iframe content when hovered over
-            function loadIframe() {
-                // Set the src attribute of the iframe to the desired URL
-                iframe.src = 'robotarm_standalone/robotarm.html'; // Replace 'https://www.example.com' with your URL
-                // Remove the event listener to prevent loading again
-                iframe.removeEventListener('mouseenter', loadIframe);
-            }
-            function unloadIframe() {
-                // Reset the src attribute of the iframe
-                iframe.src = '';
-                // Add back the event listener for loading when mouse enters
-                iframe.addEventListener('mouseenter', loadIframe);
-            }
-
-            // Add event listener to the container to trigger loading when hovered over
-            iframe.addEventListener('mouseenter', loadIframe);
-            iframe.addEventListener('mouseleave', unloadIframe);
+            hideIframe('textContainer', 'iframe2', 'robotarm_standalone/robotarm.html');
         </script>
     </div>
 
     <div id="container3" style="position:relative; top:160px; left:10px;">
-        <iframe id="iframe3" style="border:0" src="robotarm_standalone/robotarm.html" width="600px"
-            height="405px"></iframe>
+        <div id="iframe_container" style="position:relative; display:inline-block;">
+            <iframe id="iframe3" style="/* background-color:var(--gruv-blue); */ border:0" src="" <!-- width="600px"
+                height="405px" -->></iframe>
+            <div id="textContainer2"
+                style="display:block; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
+                <p>
+                    > hover to try < </p>
+            </div>
+        </div>
         <div style="position:absolute; top:0; left:620px; width:600px">
             <p>> Another One</p>
             <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
@@ -86,30 +87,13 @@
                 ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
                 enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
         </div>
+        <!-- <div id="textContainer2" style="display:block; position:absolute; top:170px; left:210px; width:600px"> -->
+        <!--     <p> -->
+        <!--         > hover to try < </p> -->
+        <!-- </div> -->
+        <script src="js/hide_iframe.js"></script>
         <script>
-            // Get references to the container and iframe elements
-            // const container2 = document.getElementById('div-container3');
-            const iframe2 = document.getElementById('iframe3');
-
-            // Function to load the iframe content when hovered over
-            function loadIframe() {
-                // Set the src attribute of the iframe to the desired URL
-                iframe2.src = 'robotarm_standalone/robotarm.html'; // Replace 'https://www.example.com' with your URL
-                // Remove the event listener to prevent loading again
-                iframe2.removeEventListener('mouseenter', loadIframe);
-            }
-            function unloadIframe() {
-                // Reset the src attribute of the iframe
-                iframe2.src = '';
-                // Add back the event listener for loading when mouse enters
-                iframe2.addEventListener('mouseenter', loadIframe);
-            }
-
-            // Add event listener to the container to trigger loading when hovered over
-            // container2.addEventListener('mouseenter', loadIframe);
-            // container2.addEventListener('mouseleave', unloadIframe);
-            iframe2.addEventListener('mouseenter', loadIframe);
-            iframe2.addEventListener('mouseleave', unloadIframe);
+            hideIframe('textContainer2', 'iframe3', 'robotarm_standalone/robotarm.html');
         </script>
     </div>
 </body>
