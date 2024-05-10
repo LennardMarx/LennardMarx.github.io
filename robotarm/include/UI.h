@@ -83,7 +83,8 @@ public:
   void drawTrajectory(std::vector<std::array<double, 2>> &_trajectory,
                       int _length) {
     for (int i = 1; i < _trajectory.size(); i++) {
-      this->setDrawColor(255, 255, 255, i);
+      // this->setDrawColor(255, 255, 255, i);
+      this->setDrawColor(249, 245, 215, i); // gruv-light (lightest)
       this->drawLine(_trajectory[i - 1][0], _trajectory[i - 1][1],
                      _trajectory[i][0], _trajectory[i][1]);
     }

@@ -9,8 +9,11 @@
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
 <body>
-    <div id="container" style="position:relative;">
-        <div id="projects" style="position:absolute; top:0; left:0;">
+
+    <!-- HEADER -->
+    <div class="header" id="header">
+        <!-- "BASH" -->
+        <div class="bash" id="projects">
             <h1>
                 <a href="index.html" class="no-underline">home</a>:~/projects$ cd ~/<span
                     id="blinking-character">_</span>
@@ -18,40 +21,26 @@
             <script src="js/blinking_character.js"></script>
         </div>
 
-        <!-- <div id="dot" style="position:absolute; top:50px; left:0px;"> -->
-        <!--     <h1> -->
-        <!--         <a href="projects.html" class="no-underline">.</a> -->
-        <!--     </h1> -->
-        <!-- </div> -->
-        <!---->
-        <!-- <div id="dot dot" style="position:absolute; top:50px; left:50px;"> -->
-        <!--     <h1> -->
-        <!--         <a href="index.html" class="no-underline">..</a> -->
-        <!--     </h1> -->
-        <!-- </div> -->
-
-        <!-- <div id="dot dot" style="position:absolute; top:50px; left:120px;"> -->
-        <div id="dot dot" style="position:absolute; top:50px; left:0px;">
+        <!-- OTHER PAGES -->
+        <div class="other_pages" id="other_pages">
             <h1>
-                <a href="new_page.html" class="no-underline">new_page/</a>
+                <a href="publications.html" class="no-underline">publications/</a>
             </h1>
         </div>
-
     </div>
 
-    <div id="container2" style="position:relative; display:flex; flex-wrap: wrap; top:130px; left:10px;">
-        <div id="iframe_container"
-            style="position:relative; min-width:30%; width:600px; max-width:100%; aspect-ratio:3/2; overflow:hidden;">
-            <iframe id="iframe2" style="border:0; display:inline-block; width:100%; height:100%" src="">
-            </iframe>
-            <div id="textContainer"
-                style="display:block; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
-                <p>
-                    > hover to try < </p>
+
+    <!-- PROJECT -->
+    <div class="project_wrapper">
+        <div class="iframe_container">
+            <iframe id="robotarm_iframe" src=""> </iframe>
+            <div class="text_container" id="robotarm_text_container">
+                <p> > hover to try < </p>
             </div>
         </div>
 
-        <div style="position:relative; top:0; left:10px; width:600px;">
+        <!-- DESCRIPTION -->
+        <div class="project_description">
             <p>> Robot Arm</p>
             <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
                 Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -63,21 +52,22 @@
         </div>
         <script src="js/hide_iframe.js"></script>
         <script>
-            hideIframe('textContainer', 'iframe2', 'robotarm_standalone/robotarm.html');
+            hideIframe('robotarm_text_container', 'robotarm_iframe', 'robotarm_standalone/robotarm.html');
         </script>
     </div>
 
-    <div id="container3" style="position:relative; top:160px; left:10px;">
-        <div id="iframe_container" style="position:relative; display:inline-block;">
-            <iframe id="iframe3" style="/* background-color:var(--gruv-blue); */ border:0" src="" <!-- width="600px"
-                height="405px" -->></iframe>
-            <div id="textContainer2"
-                style="display:block; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%);">
-                <p>
-                    > hover to try < </p>
+
+    <!-- ANOTHER -->
+    <div class="project_wrapper">
+        <div class="iframe_container">
+            <iframe id="another_iframe" src=""></iframe>
+            <div class="text_container" id="another_text_container">
+                <p> > hover to try < </p>
             </div>
         </div>
-        <div style="position:absolute; top:0; left:620px; width:600px">
+
+        <!-- DESCRIPTION -->
+        <div class="project_description">
             <p>> Another One</p>
             <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
                 Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
@@ -87,15 +77,14 @@
                 ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
                 enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
         </div>
-        <!-- <div id="textContainer2" style="display:block; position:absolute; top:170px; left:210px; width:600px"> -->
-        <!--     <p> -->
-        <!--         > hover to try < </p> -->
-        <!-- </div> -->
         <script src="js/hide_iframe.js"></script>
         <script>
-            hideIframe('textContainer2', 'iframe3', 'robotarm_standalone/robotarm.html');
+            hideIframe('another_text_container', 'another_iframe', 'robotarm_standalone/robotarm.html');
         </script>
     </div>
+
+
+
 </body>
 
 </html>
