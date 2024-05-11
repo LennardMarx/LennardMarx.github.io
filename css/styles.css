@@ -129,6 +129,7 @@ iframe {
 .text_container {
     display:block;
     position:absolute;
+    padding: 20px;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);

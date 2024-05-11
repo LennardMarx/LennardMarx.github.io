@@ -44,12 +44,12 @@ void renderImages(SDL_Renderer *&_renderer, double _x_drone, double _y_drone,
                                       "../resources/integrationMethod.bmp");
   integrationMethod.Draw(0, 0, 1200,
                          800); // backdround for choice if integration method
-  TexturedRectangle background(_renderer, "../resources/background.bmp");
+  TexturedRectangle background(_renderer, "../resources/background_gruv.bmp");
   background.Draw(0, 0, 1200, 800); // game background
-  AnimatedSprite drone(_renderer, "../resources/drone_animated.bmp");
+  AnimatedSprite drone(_renderer, "../resources/drone_animated_gruv.bmp");
   drone.Draw(x, y, droneW,
              droneH); // animated bmp of the drone (propellors turning)
-  TexturedRectangle cargo(_renderer, "../resources/cargo.bmp");
+  TexturedRectangle cargo(_renderer, "../resources/cargo_gruv.bmp");
   cargo.Draw(x_c, y_c, cargoW, cargoH); // image of the cargo
 
   if (_choice1 == 0 && _choice2 == 0) {
@@ -97,9 +97,9 @@ struct context {
 
   char keyPress = 0;
 
-  bool choice1 = 0;
-  bool choice2 = 0;
-  bool choice3 = 0;
+  bool choice1 = 1;
+  bool choice2 = 1;
+  bool choice3 = 1;
   bool droneType = 1;
   bool integrationMethod = 1;
   bool reset = false;
