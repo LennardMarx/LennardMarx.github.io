@@ -108,7 +108,7 @@ a:hover {
     position:relative;
     /* min-width:40%; */
     /* width:600px; */
-    min-width:400px;
+    /* min-width:600px; */
     width:50%;
     max-width:100%;
     aspect-ratio:3/2;
@@ -132,6 +132,14 @@ iframe {
     position:relative;
     top:0;
     left:10px;
-    min-width:300px;
-    width:600px;
+    /* min-width:600px; */
+    width:30%;
+}
+@media screen and (max-width:800px) {
+    .iframe_container {
+        width:100%;
+    }
+    .project_description {
+        width:100%;
+    }
 }
