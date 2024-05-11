@@ -114,8 +114,8 @@ a:hover {
     position:relative;
     /* min-width:40%; */
     /* width:600px; */
-    /* min-width:600px; */
-    width:50%;
+    min-width:400px;
+    width:1000px;
     max-width:100%;
     aspect-ratio:3/2;
     overflow:hidden;
@@ -134,15 +134,15 @@ iframe {
     left:50%;
     transform: translate(-50%, -50%);
 }
-
 .project_description {
     position:relative;
     top:0;
     left:10px;
-    /* min-width:600px; */
-    width:30%;
+    min-width:400px;
+    width:600px;
+    /* max-width:50%; */
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     .iframe_container {
         width:100%;
     }
