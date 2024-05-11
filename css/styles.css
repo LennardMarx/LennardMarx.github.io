@@ -157,23 +157,22 @@ iframe {
 .footer {
     background-color: var(--gruv-blue);
     color: var(--gruv-dark);
-    /* padding: 2px; */
     position: fixed;
     bottom: 0;
     width: 100%;
-    /* display: flex; */
-    /* overflow:auto; */
 }
 
 .footer p {
     color: var(--gruv-dark);
-    /* margin-right: 5px; */
-    /* margin-left: 5px; */
     padding-right:5px;
     padding-left:5px;
 }
-
-
+.footer a{
+    color: var(--gruv-dark);
+}
+.footer a:hover {
+    text-decoration: underline;
+}
 
 .left {
     float: left;
