@@ -29,6 +29,31 @@
         </div>
     </div>
 
+    <!-- PROJECT -->
+    <div class="project_wrapper">
+        <div class="iframe_container">
+            <iframe id="raycasting_iframe" src=""> </iframe>
+            <div class="text_container" id="raycasting_text_container">
+                <p> > click to try < </p>
+            </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="project_description">
+            <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
+                Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
+                nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud
+                officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia
+                dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris
+                ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
+                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+        </div>
+        <script src="js/hide_iframe.js"></script>
+        <script>
+            hideIframe('raycasting_text_container', 'raycasting_iframe', 'projects/raycasting/raycasting.html');
+        </script>
+    </div>
+
 
     <!-- PROJECT -->
     <div class="project_wrapper">
@@ -41,14 +66,18 @@
 
         <!-- DESCRIPTION -->
         <div class="project_description">
-            <p>> Robot Arm</p>
-            <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi
-                Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-                nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud
-                officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia
-                dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris
-                ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
-                enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
+            <p>> Robot Arm</p> <br />
+            <p>_A two-link robot arm written in C++ and SDL2. </p> <br />
+            <p>_Langragian equations for a double pendulum define the dynamics of the system.</p> <br />
+            <p>_Inverse kinematics are calculated to retrieve the joint angle necessary for the end-effector to reach
+                the desired target defined by the mouse cursor.</p> <br />
+            <p>_A non-linear controller defines the behaviour of the two motors at the joints, which can apply a limited
+                torque to the pendulum.</p><br>
+
+            <p>_Click into the window to get access to additional functionalities.</p>
+            <p>__Press 'c' to toggle the controller.</p>
+            <p>__Press 't' to toggle the trace.</p><br>
+
         </div>
         <script src="js/hide_iframe.js"></script>
         <script>
