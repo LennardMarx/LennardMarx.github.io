@@ -101,8 +101,8 @@ void UI::drawTexturedWalls(std::vector<float> distances,
 
     // alpha = tile_height / 1.5;
     alpha = tile_height / 1.5;
-    if (alpha > 150)
-      alpha = 150;
+    if (alpha > 255)
+      alpha = 255;
     if (alpha < 0)
       alpha = 0;
 
@@ -181,6 +181,7 @@ void UI::initialize(int sizeX, int sizeY, int posX) {
       SDL_CreateWindow("Ray Casting", 0, 0, sizeX, sizeY, SDL_WINDOW_SHOWN);
   renderer = SDL_CreateRenderer(
       window, -1, SDL_RENDERER_ACCELERATED); // | SDL_RENDERER_PRESENTVSYNC
+  SDL_SetWindowSize(window, sizeX, sizeY);
 
   TTF_Init();
   font = TTF_OpenFont("../resources/RetroGaming.ttf", 24);
