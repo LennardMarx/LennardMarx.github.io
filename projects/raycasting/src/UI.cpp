@@ -100,7 +100,7 @@ void UI::drawTexturedWalls(std::vector<float> distances,
     rect.h = tile_height;
 
     // alpha = tile_height / 1.5;
-    alpha = tile_height / 1.5;
+    alpha = -0.00008 * tile_height * tile_height + 0.6 * tile_height - 10.0;
     if (alpha > 255)
       alpha = 255;
     if (alpha < 0)
@@ -112,7 +112,6 @@ void UI::drawTexturedWalls(std::vector<float> distances,
     // setDrawColor(0, 0, 0, 255 - alpha);
     // setDrawColor(249, 245, 215, 255 - alpha);
     setDrawColor(249, 245, 215, alpha);
-    // setDrawColor(40, 40, 40, alpha);
 
     float WALL_SIZE = 50;
     float IMAGE_SIZE = 240;
@@ -180,7 +179,9 @@ void UI::initialize(int sizeX, int sizeY, int posX) {
   window =
       SDL_CreateWindow("Ray Casting", 0, 0, sizeX, sizeY, SDL_WINDOW_SHOWN);
   renderer = SDL_CreateRenderer(
-      window, -1, SDL_RENDERER_ACCELERATED); // | SDL_RENDERER_PRESENTVSYNC
+      window, -1,
+      SDL_RENDERER_ACCELERATED |
+          SDL_RENDERER_PRESENTVSYNC); // | SDL_RENDERER_PRESENTVSYNC
   SDL_SetWindowSize(window, sizeX, sizeY);
 
   TTF_Init();

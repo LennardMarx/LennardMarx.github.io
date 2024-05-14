@@ -159,13 +159,31 @@ iframe {
 
 /* -------------------------------- */
 /* FOOTER */
-
 .footer {
+    display: flex;
+    justify-content: space-between; /* Aligns items along the main axis */
+    align-items: center; /* Aligns items along the cross axis (vertically) */
     background-color: var(--gruv-blue);
     color: var(--gruv-dark);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom:0;
+    left:0;
+    position:fixed;
+    width:100%;
+}
+
+.footer .left,
+.footer .center,
+.footer .right {
+    /* flex: 1; /* Each div takes equal space */ 
+    display: flex;
+}
+
+.footer .right {
+    justify-content: right;
+}
+
+.footer .center {
+    justify-content: center; /* Centers the content inside the center div */
 }
 
 .footer p {
@@ -180,16 +198,10 @@ iframe {
     text-decoration: underline;
 }
 
-.left {
-    float: left;
-    display:flex;
-    
-}
-
-.right {
-    display: flex;
-    float: right;
-    /* margin-right: 5px; */
+.footer_logo {
+    height:20px;
+    width:20px;
+    transform: translate(0, 2px);
 }
 
 
