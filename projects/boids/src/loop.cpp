@@ -16,7 +16,7 @@ struct context {
           ui->getRenderer(), "../resources/ducks_12_flap_outline.bmp");
 
   // The boids with random position an orientation.
-  int boidCount = 600;
+  int boidCount = 1000;
   std::vector<std::shared_ptr<Boid>> boids;
 
   int mouseX, mouseY;
