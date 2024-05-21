@@ -7,7 +7,7 @@ Loop::Loop() {}
 Loop::~Loop() {}
 
 struct context {
-  UI *ui = new UI(1600, 1600);
+  UI *ui = new UI(1600, 2400);
   std::unique_ptr<TexturedRectangle> birdTex =
       std::make_unique<TexturedRectangle>(ui->getRenderer(),
                                           "../resources/duck.bmp");
@@ -16,7 +16,7 @@ struct context {
           ui->getRenderer(), "../resources/ducks_12_flap_outline.bmp");
 
   // The boids with random position an orientation.
-  int boidCount = 1000;
+  int boidCount = 2000;
   std::vector<std::shared_ptr<Boid>> boids;
 
   int mouseX, mouseY;
