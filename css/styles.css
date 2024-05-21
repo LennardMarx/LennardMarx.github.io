@@ -176,7 +176,7 @@ iframe {
 .footer .left,
 .footer .center,
 .footer .right {
-    flex: 1; /* Each div takes equal space */ 
+    /*flex: 1; /* Each div takes equal space */ 
     display: flex;
 }
 
