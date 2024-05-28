@@ -108,7 +108,7 @@ int main(int argc, char *argv[]) {
   ctx.animatedSprite = animated_sprite_create(
       ctx.ui->renderer, "../resources/ducks_12_flap_outline.bmp");
 
-  ctx.boidCount = 10000;
+  ctx.boidCount = 5000;
   ctx.boids = boids_create(ctx.ui, ctx.boidCount);
 
   ctx.FPS = 60;
