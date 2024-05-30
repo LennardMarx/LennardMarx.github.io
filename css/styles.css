@@ -42,7 +42,8 @@ body.project {
 canvas {
     display: block; /* Make the canvas a block element */
     width: 100%; /* Set the canvas width to 100% of its container (the div) */
-    height: auto; /* Allow the canvas height to adjust proportionally */
+    /* height: auto; /* Allow the canvas height to adjust proportionally */ 
+    height: 100%;
 }
 
 

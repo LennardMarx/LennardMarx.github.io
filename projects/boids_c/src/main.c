@@ -3,6 +3,7 @@
 #include "../include/event_handler.h"
 #include "../include/quad_tree.h"
 #include "../include/ui.h"
+#include <SDL2/SDL_video.h>
 #include <emscripten.h>
 #include <stdio.h>
 #include <time.h>
@@ -33,6 +34,9 @@ struct context {
 static void mainloop(void *arg) {
   // chdir(SDL_GetBasePath());
   struct context *ctx = (struct context *)(arg);
+  SDL_GetWindowSize(ctx->ui->window, &ctx->ui->sizeX, &ctx->ui->sizeY);
+  printf("x: %d, y:%d\n", ctx->ui->sizeX, ctx->ui->sizeY);
+
   ctx->frameStart = SDL_GetTicks();
 
   SDL_GetMouseState(&ctx->mouseX, &ctx->mouseY);
@@ -102,8 +106,10 @@ int main(int argc, char *argv[]) {
 
   struct context ctx;
 
-  ctx.ui = ui_create("Boids", 1800, 3000);
+  ctx.ui = ui_create("Boids", 1000, 500);
   ctx.eventHandler = event_handler_create();
+  SDL_SetWindowResizable(ctx.ui->window, 1);
+  SDL_GetWindowSize(ctx.ui->window, &ctx.ui->sizeX, &ctx.ui->sizeY);
 
   ctx.animatedSprite = animated_sprite_create(
       ctx.ui->renderer, "../resources/ducks_12_flap_outline.bmp");
@@ -115,6 +121,9 @@ int main(int argc, char *argv[]) {
   ctx.FRAME_DELAY = 1000 / ctx.FPS;
 
   ctx.frameCount = 0;
+
+  // SDL_SetWindowFullscreen(ctx.ui->window, SDL_WINDOW_FULLSCREEN);
+  //
 
   emscripten_set_main_loop_arg(mainloop, &ctx, -1, 1);
 
