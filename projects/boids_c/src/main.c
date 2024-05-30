@@ -106,7 +106,7 @@ int main(int argc, char *argv[]) {
 
   struct context ctx;
 
-  ctx.ui = ui_create("Boids", 1000, 500);
+  ctx.ui = ui_create("Boids", 1000, 1000);
   ctx.eventHandler = event_handler_create();
   SDL_SetWindowResizable(ctx.ui->window, 1);
   SDL_GetWindowSize(ctx.ui->window, &ctx.ui->sizeX, &ctx.ui->sizeY);
@@ -122,7 +122,7 @@ int main(int argc, char *argv[]) {
 
   ctx.frameCount = 0;
 
-  // SDL_SetWindowFullscreen(ctx.ui->window, SDL_WINDOW_FULLSCREEN);
+  SDL_SetWindowFullscreen(ctx.ui->window, SDL_WINDOW_FULLSCREEN_DESKTOP);
   //
 
   emscripten_set_main_loop_arg(mainloop, &ctx, -1, 1);
