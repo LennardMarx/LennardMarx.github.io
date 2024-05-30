@@ -98,6 +98,7 @@ static void mainloop(void *arg) {
 }
 
 int main(int argc, char *argv[]) {
+  SDL_Init(SDL_INIT_VIDEO);
   if (chdir(SDL_GetBasePath()) != 0) {
     perror("chdir failed");
   }
@@ -106,10 +107,13 @@ int main(int argc, char *argv[]) {
 
   struct context ctx;
 
-  ctx.ui = ui_create("Boids", 1000, 1000);
+  SDL_DisplayMode DM;
+  SDL_GetCurrentDisplayMode(0, &DM);
+
+  ctx.ui = ui_create("Boids", DM.w, DM.h);
   ctx.eventHandler = event_handler_create();
   SDL_SetWindowResizable(ctx.ui->window, 1);
-  SDL_GetWindowSize(ctx.ui->window, &ctx.ui->sizeX, &ctx.ui->sizeY);
+  // SDL_GetWindowSize(ctx.ui->window, &ctx.ui->sizeX, &ctx.ui->sizeY);
 
   ctx.animatedSprite = animated_sprite_create(
       ctx.ui->renderer, "../resources/ducks_12_flap_outline.bmp");
@@ -122,7 +126,7 @@ int main(int argc, char *argv[]) {
 
   ctx.frameCount = 0;
 
-  SDL_SetWindowFullscreen(ctx.ui->window, SDL_WINDOW_FULLSCREEN_DESKTOP);
+  // SDL_SetWindowFullscreen(ctx.ui->window, SDL_WINDOW_FULLSCREEN_DESKTOP);
   //
 
   emscripten_set_main_loop_arg(mainloop, &ctx, -1, 1);
