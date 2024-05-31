@@ -11,9 +11,13 @@
 
 #define PI 3.141592654
 
+EM_JS(int, canvas_get_width, (), { return canvas.width; });
+EM_JS(int, canvas_get_height, (), { return canvas.height; });
+
 struct context {
   struct UI *ui;
   struct EventHandler *eventHandler;
+  SDL_DisplayMode *DM;
 
   struct AnimatedSprite *animatedSprite;
 
@@ -34,8 +38,12 @@ struct context {
 static void mainloop(void *arg) {
   // chdir(SDL_GetBasePath());
   struct context *ctx = (struct context *)(arg);
-  SDL_GetWindowSize(ctx->ui->window, &ctx->ui->sizeX, &ctx->ui->sizeY);
-  printf("x: %d, y:%d\n", ctx->ui->sizeX, ctx->ui->sizeY);
+  // SDL_GetCurrentDisplayMode(0, ctx->DM);
+  // ctx->ui->sizeX = ctx->DM->w;
+  // ctx->ui->sizeY = ctx->DM->h;
+  // SDL_GetWindowSize(ctx->ui->window, &ctx->ui->sizeX, &ctx->ui->sizeY);
+  // SDL_SetWindowSize(ctx->ui->window, ctx->DM->w, ctx->DM->h);
+  // printf("x: %d, y:%d\n", ctx->ui->sizeX, ctx->ui->sizeY);
 
   ctx->frameStart = SDL_GetTicks();
 
@@ -107,18 +115,22 @@ int main(int argc, char *argv[]) {
 
   struct context ctx;
 
-  SDL_DisplayMode DM;
-  SDL_GetCurrentDisplayMode(0, &DM);
+  // SDL_DisplayMode DM;
+  // SDL_GetCurrentDisplayMode(0, &DM);
 
-  ctx.ui = ui_create("Boids", DM.w, DM.h);
+  int canvasW = canvas_get_width();
+  int canvasH = canvas_get_height();
+
+  ctx.ui = ui_create("Boids", canvasW, canvasH);
+  // ctx.ui = ui_create("Boids", DM.w, DM.h);
   ctx.eventHandler = event_handler_create();
-  SDL_SetWindowResizable(ctx.ui->window, 1);
+  // SDL_SetWindowResizable(ctx.ui->window, 1);
   // SDL_GetWindowSize(ctx.ui->window, &ctx.ui->sizeX, &ctx.ui->sizeY);
 
   ctx.animatedSprite = animated_sprite_create(
       ctx.ui->renderer, "../resources/ducks_12_flap_outline.bmp");
 
-  ctx.boidCount = 5000;
+  ctx.boidCount = 3000;
   ctx.boids = boids_create(ctx.ui, ctx.boidCount);
 
   ctx.FPS = 60;
