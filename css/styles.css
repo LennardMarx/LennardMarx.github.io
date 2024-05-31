@@ -20,14 +20,17 @@ body {
     /* margin-left: 0px; */
     /* margin-top: 0px; */
     margin:0px;
-    display:block;
-    overflow: hidden;
+    /* display:block; */
+    /* overflow: hidden; */
     /* padding-bottom: 50px; */
 }
 body.project {
     /* padding-bottom: 0px; */
     padding: 0;
     margin: 0;
+}
+body.frontpage {
+    overflow: hidden;
 }
 
 .section {
