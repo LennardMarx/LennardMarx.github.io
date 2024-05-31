@@ -38,16 +38,22 @@ struct context {
 static void mainloop(void *arg) {
   // chdir(SDL_GetBasePath());
   struct context *ctx = (struct context *)(arg);
-  // SDL_GetCurrentDisplayMode(0, ctx->DM);
-  // ctx->ui->sizeX = ctx->DM->w;
-  // ctx->ui->sizeY = ctx->DM->h;
-  // SDL_GetWindowSize(ctx->ui->window, &ctx->ui->sizeX, &ctx->ui->sizeY);
-  // SDL_SetWindowSize(ctx->ui->window, ctx->DM->w, ctx->DM->h);
-  // printf("x: %d, y:%d\n", ctx->ui->sizeX, ctx->ui->sizeY);
+
+  // printf("frameCount: %d\n", ctx->frameCount);
+  if (ctx->frameCount % 50 == 0) {
+    int canvasW = canvas_get_width();
+    int canvasH = canvas_get_height();
+    ctx->ui->sizeX = canvasW;
+    ctx->ui->sizeY = canvasH;
+    SDL_SetWindowSize(ctx->ui->window, canvasW, canvasH);
+    printf("x: %d, y:%d\n", ctx->ui->sizeX, ctx->ui->sizeY);
+  }
 
   ctx->frameStart = SDL_GetTicks();
 
   SDL_GetMouseState(&ctx->mouseX, &ctx->mouseY);
+  // SDL_GetGlobalMouseState(&ctx->mouseX, &ctx->mouseY);
+
   glm_vec2((vec2){ctx->mouseX, ctx->mouseY}, ctx->mouse);
 
   handle_events(ctx->eventHandler, ctx->ui, &ctx->mouse);
