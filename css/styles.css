@@ -20,8 +20,9 @@ body {
     /* margin-left: 0px; */
     /* margin-top: 0px; */
     margin:0px;
-    /* display:block; */
-    padding-bottom: 50px;
+    display:block;
+    overflow: hidden;
+    /* padding-bottom: 50px; */
 }
 body.project {
     /* padding-bottom: 0px; */
