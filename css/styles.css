@@ -155,7 +155,7 @@ a:hover {
     width: 60vw;
     aspect-ratio: var(--asp_rat);
     overflow:hidden;
-    background:url(../resources/loading.gif) center center no-repeat;
+    /* background:url(../resources/loading.gif) center center no-repeat; */
     /* background-color: var(--gruv-blue); */
 
     /* margin-left: 10px; */
