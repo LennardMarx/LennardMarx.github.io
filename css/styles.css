@@ -215,6 +215,22 @@ iframe {
 
 
 /* -------------------------------- */
+/* RESEARCH PAGE */
+.research_image{
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.flip_button{
+    background-color: brightred; /* Use the color name */
+}
+
+/* -------------------------------- */
 /* FOOTER */
 .footer {
     display: flex;
