@@ -227,7 +227,21 @@ iframe {
 }
 
 .flip_button{
-    background-color: brightred; /* Use the color name */
+    background-color: transparent; /* Use the color name */
+    display:block;
+    position:absolute;
+    top:50%;
+    right:-40px;
+    transform: translate(-50%, -50%);
+    border:none;
+    text-decoration:none;
+    padding:0px;
+    margin: 0px;
+}
+
+.next_button_image{
+    height:60%;
+    width:60%;
 }
 
 /* -------------------------------- */
