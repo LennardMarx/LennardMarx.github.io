@@ -1,3 +1,0 @@
-[submodule "projects/opengl_raymarching"]
-	path = projects/opengl_raymarching
-	url = git@github.com:LennardMarx/opengl_raymarching.git
