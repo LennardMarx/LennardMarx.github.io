@@ -1,3 +1,6 @@
 [submodule "projects/opengl_raymarching"]
 	path = projects/opengl_raymarching
 	url = git@github.com:LennardMarx/opengl_raymarching.git
+[submodule "projects/dronesim"]
+	path = projects/dronesim
+	url = git@github.com:LennardMarx/2D-Cargo-Drone-Simulator.git
