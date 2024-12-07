@@ -17,11 +17,14 @@
 
 #include <SDL2/SDL_ttf.h>
 #include <cstdlib>
-#include <emscripten.h>
 #include <string>
 #include <unistd.h>
 #include <utility>
 #include <vector>
+
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 // #include <SDL2/SDL_image.h>
 
@@ -302,12 +305,17 @@ static void mainloop(void *arg) {
 }
 
 int main() {
-  // chdir(SDL_GetBasePath());
   context ctx;
-
   ctx.controllerCheck = 0;
 
+#ifdef __EMSCRIPTEN__
   emscripten_set_main_loop_arg(mainloop, &ctx, -1, 1);
+#else
+  chdir(SDL_GetBasePath());
+  while (!ctx.quit) {
+    mainloop(&ctx);
+  }
+#endif
 
   return 0;
 }
