@@ -4,3 +4,6 @@
 [submodule "projects/dronesim"]
 	path = projects/dronesim
 	url = git@github.com:LennardMarx/2D-Cargo-Drone-Simulator.git
+[submodule "projects/robotarm"]
+	path = projects/robotarm
+	url = git@github.com:LennardMarx/RobotArm.git
