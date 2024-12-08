@@ -34,5 +34,6 @@ emcc -O2 -c src/world_utils.cpp -o obj/world_utils.o
 # program
 # g++ obj/*.o -I/usr/include/SDL2/ -I. -Iinclude/ -lSDL2main -lSDL2 -g -o bin/game
 # emcc obj/*.o -s WASM=1 -s USE_SDL=2 -O2 -o renderingC.js
-emcc obj/*.o -s WASM=1 -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 --preload-file textures -O2 -o raycasting.js
+# emcc obj/*.o -s WASM=1 -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 --preload-file resources --preload-file textures -O2 -o raycasting.js
+emcc obj/*.o -s WASM=1 -s USE_SDL=2 -s INITIAL_MEMORY=128MB -s MAXIMUM_MEMORY=512MB -s ALLOW_MEMORY_GROWTH=1 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 --preload-file resources --preload-file textures -O2 -o raycasting.js
 # emcc main.cpp -s WASM=1 -s USE_SDL=2 -s USE_SDL_IMAGE=2 -s SDL2_IMAGE_FORMATS='["png"]' -s USE_SDL_TTF=2 --preload-file res -o index.js
