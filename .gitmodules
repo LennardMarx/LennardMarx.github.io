@@ -7,3 +7,6 @@
 [submodule "projects/robotarm"]
 	path = projects/robotarm
 	url = git@github.com:LennardMarx/RobotArm.git
+[submodule "projects/raycasting"]
+	path = projects/raycasting
+	url = git@github.com:LennardMarx/RaycastEngine.git
