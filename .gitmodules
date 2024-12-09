@@ -10,3 +10,6 @@
 [submodule "projects/raycasting"]
 	path = projects/raycasting
 	url = git@github.com:LennardMarx/RaycastEngine.git
+[submodule "projects/boids_c"]
+	path = projects/boids_c
+	url = git@github.com:LennardMarx/BoidsC.git
