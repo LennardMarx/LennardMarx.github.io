@@ -13,3 +13,6 @@
 [submodule "projects/boids_c"]
 	path = projects/boids_c
 	url = git@github.com:LennardMarx/BoidsC.git
+[submodule "projects/renderingC"]
+	path = projects/renderingC
+	url = git@github.com:LennardMarx/RenderingInC.git
