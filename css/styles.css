@@ -4,6 +4,17 @@
     /* Add additional font weights and styles if needed */
 }
 
+.fullwindow {
+    position: absolute;
+                top: 0px;
+                left: 0px;
+                margin: 0px;
+                border: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: block;
+            }
 :root {
     --gruv-light: #f9f5d7; /* lightest gruvbox */
     --gruv-dark: #282828; /* darkest gruvbox */
