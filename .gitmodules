@@ -16,3 +16,6 @@
 [submodule "projects/renderingC"]
 	path = projects/renderingC
 	url = git@github.com:LennardMarx/RenderingInC.git
+[submodule "projects/cable_car"]
+	path = projects/cable_car
+	url = git@github.com:LennardMarx/cable_car.git

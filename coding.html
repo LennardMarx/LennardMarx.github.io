@@ -29,7 +29,39 @@
             </h1>
         </div>
     </div>
-    
+
+    <!-- CABLE CAR -->
+    <div class="project_wrapper">
+        <div class="iframe_container">
+            <iframe id="cable_car_iframe" src=""></iframe>
+            <div class="text_container" id="cable_car_text_container">
+                <p> > click to try < </p>
+            </div>
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="project_description">
+            <p>> Chasm City Cable Car</p>
+            <ul>
+                <li>A pod with four telescopic arms climbing through vines hanging from a futuristic city, inspired
+                    by Alastair Reynolds' Chasm City. Written in C++ and SDL3, compiled to WebAssembly.</li><br />
+                <li>The vines are simulated with position based dynamics, the pod's weight pulls them down.</li><br />
+                <li>A controller distributes the force needed to carry and steer the pod onto the grasping arms,
+                    while the gait lets go of weak grips and reaches for better ones.</li><br />
+                <li>The pod follows the mouse cursor.</li>
+                <li>Click into the window to get access to additional functionalities.</li>
+                <li>Press 'c' to toggle the controller.</li>
+                <li>Press 'f' to toggle path finding.</li>
+                <li>Press 'w' to toggle the wind.</li>
+                <li>Press 'r' to respawn the pod, 'g' for a new city.</li><br>
+            </ul>
+        </div>
+        <script src="js/hide_iframe.js"></script>
+        <script>
+            hideIframe('cable_car_text_container', 'cable_car_iframe', 'projects/cable_car/cable_car.html');
+        </script>
+    </div>
+
     <!-- OpenGL Raymarching-->
     <div class="project_wrapper">
         <div class="iframe_container">
